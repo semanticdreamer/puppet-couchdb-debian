@@ -17,7 +17,6 @@ class couchdb-debian::install($version='1.1.1-2',
    exec { "set bind_address":
        command  => "sed -i 's/;bind_address = 127.0.0.1/bind_address = ${couchdb-debian::bind_address}/' /etc/couchdb/local.ini",
        path     => [ "/bin/" ],
-       onlyif => "/bin/grep -qFx ';bind_address = 127.0.0.1' '/etc/couchdb/local.ini'",
        subscribe => Apt::Force["couchdb"]
     }
 }
