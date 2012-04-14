@@ -1,0 +1,1 @@
+#Puppet Module CouchDB for Debian 6 'testing'
