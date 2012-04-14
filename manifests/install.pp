@@ -1,5 +1,5 @@
 class couchdb-debian::install($version='1.1.1-2',
-                              $bind_address = '0.0.0.0',) {
+                              $bind_address = '0.0.0.0') {
 
     apt::source { "debian_testing":
       location          => "http://http.us.debian.org/debian",
